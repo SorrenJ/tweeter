@@ -1,0 +1,65 @@
+/* Main container for the page content */
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section for composing a new tweet */
+.new-tweet {
+    /* text-align: center;  */
+}
+
+/* Heading for the tweet section */
+.new-tweet h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+/* Styling for the textarea input */
+.new-tweet textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 4px solid #535353; /* Bottom border */
+    font-size: 1.2em;
+    /* text-align: center;  */
+    resize: none; /* Disable resizing */
+}
+
+/* Container for the button and counter */
+.new-tweet form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Styling for the button */
+.new-tweet button {
+    background-color: #4056A1; /* Twitter blue */
+    font-family: "Bungee", sans-serif;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    /* font-size: 1em; */
+    cursor: pointer;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Styling for the character counter */
+.new-tweet .counter {
+    font-size: 1.2em;
+    color: #535353;
+    font-family: "Bungee", sans-serif;
+}
