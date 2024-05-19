@@ -25,3 +25,9 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ main{
+  width: 90%;
+  margin: auto;
+  border: 3px solid #73AD21;
+  padding: 10px;
+ }
