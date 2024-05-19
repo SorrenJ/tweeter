@@ -1,0 +1,26 @@
+header {
+    height: 400px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    /* padding-left: 33%;
+    padding-right: 33%; */
+    text-align: center;
+    /* margin-top:200px; */
+    padding: 40px;
+    padding-top:100px;
+    color: white;
+    background-image: url("../images/cubes.png");
+    background-color: #a97900;
+}
+
+.header-content{
+    padding-top:0.5em;
+    padding-bottom:0.5em;
+    transform: scale(0.75);
+    line-height: 0.01;
+}
+
+header br{
+
+}
