@@ -1,4 +1,4 @@
-header {
+.hero-banner {
     height: 400px;
     width: 100%;
     align-items: center;
@@ -11,7 +11,7 @@ header {
     padding-top:100px;
     color: white;
     background-image: url("../images/cubes.png");
-    background-color: #a97900;
+    background-color: #232020;
 }
 
 .header-content{

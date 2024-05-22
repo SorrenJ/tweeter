@@ -29,6 +29,8 @@
     <link rel="stylesheet" href="./styles/header.css" type="text/css" />
 
     <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
+    
+    <link rel="stylesheet" href="./styles/tweet.css" type="text/css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -53,7 +55,7 @@
     </div>
     </nav>
 
-    <header>
+    <header class = "hero-banner">
       <div class = header-content>
           <img src="/images/profile-hex.png"> 
       <!-- </div> -->
@@ -63,22 +65,66 @@
       </div>
   </header>
 
-<button id="btn_test">Test Me</button>
-
+<!-- <button id="btn_test">Test Me</button> -->
+</br>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <!-- <h2>Compose Tweet</h2> -->
         <form action="/tweets">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
-          <textarea name="text" id="tweet-text"  placeholder="What are you humming about?"></textarea>
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"  placeholder=""></textarea>
           <div>
             <button id="btn" type="submit">Tweet</button>
             <output id="char-counter" name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+  
+  
+    </br>
+      <div class="tweet">
+        <header>
+            <img src="/images/Ryuji.png" alt="Newton" width="64">
+            <h3>Newton <span class="username">@SirIsaac</span></h3>
+        </header>
+        <div class="content">
+            If I have seen further it is by standing on the shoulders of giants
+        </div>
+        <footer>
+            <div class="date">10 days ago</div>
+            <div class="actions">
+                <span><i class="fa-solid fa-flag"></i></span>
+                <span><i class="fa-solid fa-retweet"></i></span>
+                <span><i class="fa-solid fa-heart"></i></span>
+            </div>
+        </footer>
+    </div>
+  </br>
+
+    
+</br>
+<div class="tweet">
+  <header>
+      <img src="/images/Ann.png" alt="Newton" width="64">
+      <h3>Newton <span class="username">@SirIsaac</span></h3>
+  </header>
+  <div class="content">
+      If I have seen further it is by standing on the shoulders of giants
+  </div>
+  <footer>
+      <div class="date">10 days ago</div>
+      <div class="actions">
+          <span><i class="fa-solid fa-flag"></i></span>
+          <span><i class="fa-solid fa-retweet"></i></span>
+          <span><i class="fa-solid fa-heart"></i></span>
+      </div>
+  </footer>
+</div>
+</br>
     </main>
     <script src="/scripts/composer-char-counter.js"></script> 
+  
+  
   </body>
 </html>
