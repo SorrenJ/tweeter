@@ -29,7 +29,7 @@ $(document).ready(function() {
       },
       "created_at": 1461113959088
     }
-  ]
+  ];
 
 
   const renderTweets = function(tweets) {
@@ -37,24 +37,17 @@ $(document).ready(function() {
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
   
-  // data [{},{},{}]
-
-
-  console.log(tweets.length);
+    // data [{},{},{}]
+    console.log(tweets.length);
     for (let i = 0; i < tweets.length; i++) {// {}, {}, {}
      
-     let tweet = tweets[i];
- createTweetElement(tweet);
-
+      let tweet = tweets[i];
+      let newTweet = createTweetElement(tweet);
+      $('#tweets-container').prepend(newTweet);
     }
   
   };
   
-
-
-
-
-
   const createTweetElement = function(tweet) {
     const $tweet = $(`
       <article class="tweet">
@@ -76,12 +69,10 @@ $(document).ready(function() {
       </article>
       </br>
     `);
-    return $('#tweets-container').append($tweet);
+    return $tweet;
   };
-
-
+  
   renderTweets(data);
-
- // const $tweet = createTweetElement(tweetData);
+  // const $tweet = createTweetElement(tweetData);
  
 });

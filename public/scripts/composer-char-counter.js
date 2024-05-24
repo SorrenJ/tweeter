@@ -1,22 +1,22 @@
 $(document).ready(function() {
-    // --- our code goes here ---
+  // --- our code goes here ---
   
-      $("#tweet-text").on('keyup', function(event) {
+  $("#tweet-text").on('keyup', function(event) {
       
-        var charCount = $(this).val().length;
-        var setLimit = 140;
-        var charCounter = setLimit - charCount;
+    let charCount = $(this).val().length;
+    let setLimit = 140;
+    let charCounter = setLimit - charCount;
 
-        // alert(`user wrote ${charCount} characters`);
-        // Update the character count display
-        $('#char-counter').text(charCounter);
+    // alert(`user wrote ${charCount} characters`);
+    // Update the character count display
+    $('#char-counter').text(charCounter);
 
-        if (charCounter < 0){
-        $('#char-counter').css( "color", "red");
-        }
+    if (charCounter < 0) {
+      $('#char-counter').css("color", "red");
+    }
     
-      });
+  });
     
 
 
-    });
+});
