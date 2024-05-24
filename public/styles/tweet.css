@@ -10,7 +10,7 @@
 }
 
 .tweet:hover {
-    box-shadow: 0 4px 10px rgba(2, 14, 73, 0.289); /* Increased shadow spread and intensity */
+    box-shadow: 0 4px 10px rgba(2, 14, 73, 0.5); /* Increased shadow spread and intensity */
 }
 
 .tweet header {
