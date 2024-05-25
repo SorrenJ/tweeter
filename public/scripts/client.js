@@ -57,7 +57,40 @@ $(document).ready(function() {
   const $tweetForm = $('#tweet-form');
 
   $tweetForm.submit(function(event) {
+    
+ console.log($("#tweet-text").val().length);
+
+    
+    
+    
     event.preventDefault();
+    let setLimit = 140;
+
+    
+    if ($("#tweet-text").val().length === 0){ // user inputs 0 chars
+   return alert("Field cannot be blank");
+      
+   }
+
+   if ($("#tweet-text").val() === ""){ // user inputs nothing
+    return alert("Field cannot be blank");
+       
+    }
+    if ([...$("#tweet-text").val()].every(char => char === ' ')){ //converts the string to indiv chars and checks if every char is a space
+      return alert("Field cannot be blank");
+         
+      }
+    if ($("#tweet-text").val() === null){ // user inputs null
+      return alert("Field cannot be blank");
+         
+      }
+   if ($("#tweet-text").val().length > setLimit){ // user inputs over set char limit
+    return alert("Over the character limit");
+       
+    }
+   
+    // if statement prevents the user from going to tweet route if the conditions are not met
+   if ($("#tweet-text").val().length > 0 && $("#tweet-text").val().length <= setLimit ){
 
     $.ajax({
       url: '/tweets',
@@ -69,8 +102,9 @@ $(document).ready(function() {
       })
       .catch((error) => {
         console.log("error: ", error);
+       
       });
-
+    }
     console.log("#tweet-form.serialize() value: ", $(this).serialize());
   });
 });

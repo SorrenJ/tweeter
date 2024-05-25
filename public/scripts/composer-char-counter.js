@@ -13,10 +13,12 @@ $(document).ready(function() {
 
     if (charCounter < 0) {
       $('#char-counter').css("color", "red");
+    } else {
+      $('#char-counter').css("color", "#484848");
     }
-    
+ 
   });
-    
+
 
 
 });
