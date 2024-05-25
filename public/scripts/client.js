@@ -72,7 +72,34 @@ $(document).ready(function() {
     return $tweet;
   };
   
-  renderTweets(data);
+  // renderTweets(data);
   // const $tweet = createTweetElement(tweetData);
  
+
+
+
+  const $tweetForm = $('#tweet-form');
+
+
+  $tweetForm.submit(function(event) {
+    event.preventDefault();
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: $("#tweet-form").serialize()
+    })
+      .then(() => {
+        $('#tweet-container').empty();
+       
+        renderTweets(data.reverse());
+      })
+      .catch((error) => {
+        console.log("error: ", error);
+      });
+
+    console.log("#tweet-form.serialize() value: ", $("#tweet-form").serialize());
+
+  });
+
 });
