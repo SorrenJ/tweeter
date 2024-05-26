@@ -72,3 +72,17 @@
     /* color: #ffffff; */
     font-family: "Bungee", sans-serif;
 }
+
+
+.error {
+    font-size: 1.5em;
+    color: red;
+    border-style: solid;
+    border-color: red;
+    padding:12px;
+    text-align:center;
+    width:80%;
+    margin-left:10%;
+    margin-right:10%;
+z-index:10;
+}

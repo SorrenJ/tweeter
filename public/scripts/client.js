@@ -52,7 +52,7 @@ $(document).ready(function() {
   };
 
   loadTweets();
-  $('.error').hide();
+$('.error').hide();
 
   const $tweetForm = $('#tweet-form');
 
@@ -68,24 +68,30 @@ $(document).ready(function() {
 
     
     if ($("#tweet-text").val().length === 0){ // user inputs 0 chars
-   return alert("Field cannot be blank");
-      
+   //return alert("Field cannot be blank");
+  // $(".error").show();
+  return $("#empty").slideDown();
    }
 
    if ($("#tweet-text").val() === ""){ // user inputs nothing
-    return alert("Field cannot be blank");
-       
+    //return alert("Field cannot be blank");
+   // $(".error").show();
+   return $("#empty").slideDown();  
     }
     if ([...$("#tweet-text").val()].every(char => char === ' ')){ //converts the string to indiv chars and checks if every char is a space
-      return alert("Field cannot be blank");
+     // return alert("Field cannot be blank");
+    // $(".error").show();
+    return $("#empty").slideDown();
          
       }
     if ($("#tweet-text").val() === null){ // user inputs null
-      return alert("Field cannot be blank");
+    //  return alert("Field cannot be blank");
+    //$(".error").show();
+    return $("#empty").slideDown();
          
       }
    if ($("#tweet-text").val().length > setLimit){ // user inputs over set char limit
-    return alert("Over the character limit");
+    return $("#overLim").slideDown();
        
     }
    
@@ -99,6 +105,7 @@ $(document).ready(function() {
     })
       .then(() => {
         loadTweets(); // Load tweets again to get the new one
+        $('.error').hide();
       })
       .catch((error) => {
         console.log("error: ", error);
