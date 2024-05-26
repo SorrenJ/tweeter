@@ -105,7 +105,7 @@ $('.error').hide();
     })
       .then(() => {
         loadTweets(); // Load tweets again to get the new one
-        $('.error').hide();
+        $('.error').slideUp();
       })
       .catch((error) => {
         console.log("error: ", error);
