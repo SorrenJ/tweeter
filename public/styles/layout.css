@@ -67,9 +67,12 @@ body {
   margin-left: 40%; /* so that it doesnt overlap with left item when it position fixed */
    
 }
+.end_message{
+  font-size:1.5em;
+  text-align:center;
+}
 
-
- @media screen and (max-width: 800px) {
+ @media screen and (max-width: 1024px) {
   .main-container {
     flex-direction: column;
     padding-top: 0.5em;
@@ -79,8 +82,11 @@ body {
     flex: 100%;
     text-align: center;
     margin: 0;
-    padding: 0 1.5em;
+    padding: 0;
     width: 100%;
     position:relative;
 }
+
+
+
 }

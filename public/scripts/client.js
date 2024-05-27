@@ -11,6 +11,13 @@ $(document).ready(function() {
     }
   };
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+
   const createTweetElement = function(tweet) {
     const $tweet = $(`
       <article class="tweet">
@@ -19,7 +26,7 @@ $(document).ready(function() {
           <h3>${tweet.user.name} <span class="username">${tweet.user.handle}</span></h3>
         </header>
         <div class="content">
-          ${tweet.content.text}
+          ${escape(tweet.content.text)}
         </div>
         <footer>
           <div class="date">${timeago.format(tweet.created_at)}</div>
@@ -33,6 +40,7 @@ $(document).ready(function() {
       </article>
       <br>
     `);
+    // tweet.content.text.empty();
     return $tweet;
   };
 
@@ -70,27 +78,20 @@ $('.error').hide();
     if ($("#tweet-text").val().length === 0){ // user inputs 0 chars
    //return alert("Field cannot be blank");
   // $(".error").show();
-  return $("#empty").slideDown();
+  $('.error').slideUp(); // slide up in case you have an error message already
+  return $("#empty").slideDown(); // the new error message
    }
 
-   if ($("#tweet-text").val() === ""){ // user inputs nothing
-    //return alert("Field cannot be blank");
-   // $(".error").show();
-   return $("#empty").slideDown();  
-    }
     if ([...$("#tweet-text").val()].every(char => char === ' ')){ //converts the string to indiv chars and checks if every char is a space
      // return alert("Field cannot be blank");
     // $(".error").show();
+    $('.error').slideUp(); // slide up in case you have an error message already
     return $("#empty").slideDown();
          
       }
-    if ($("#tweet-text").val() === null){ // user inputs null
-    //  return alert("Field cannot be blank");
-    //$(".error").show();
-    return $("#empty").slideDown();
-         
-      }
+   
    if ($("#tweet-text").val().length > setLimit){ // user inputs over set char limit
+    $('.error').slideUp(); // slide up in case you have an error message already
     return $("#overLim").slideDown();
        
     }
@@ -104,7 +105,9 @@ $('.error').hide();
       data: $(this).serialize()
     })
       .then(() => {
+        $('#tweet-text').val(''); // clears text area after a sucessful post
         loadTweets(); // Load tweets again to get the new one
+      
         $('.error').slideUp();
       })
       .catch((error) => {
@@ -112,6 +115,12 @@ $('.error').hide();
        
       });
     }
-    console.log("#tweet-form.serialize() value: ", $(this).serialize());
+    //console.log("#tweet-form.serialize() value: ", $(this).serialize());
   });
+
+
+  $('#arrow-button-selector').click(function() {
+    $('html, body').animate({scrollTop: 0}, 'fast');
+});
+
 });

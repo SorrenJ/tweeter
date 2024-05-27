@@ -13,6 +13,7 @@
     background-image: url("../images/cubes.png");
     background-color: #232020;
     margin-left: 10%;
+    margin-top:50px;
     /* margin-right: 10%; */
 }
 
@@ -20,21 +21,25 @@
 .header-content{
     /* padding-top:0.25em; */
     /* padding-bottom:0.5em; */
-    transform: scale(0.75);
-    line-height: 0.01;
+    /* transform: scale(0.75); */
+    /* line-height: 0.01; */
+    vertical-align: middle;
+    margin:25%, 25%;
 }
 
 header br{
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1024px) {
     .hero-banner {
         margin-left: 0;
-        padding-top:2em;
+        /* padding-top:2em; */
+        z-index:2;
+        margin-top:-15px;
     }
     .header-content{
-        padding-top:100px;
+        /* padding-top:100px; */
      
     }
 }
