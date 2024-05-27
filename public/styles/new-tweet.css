@@ -63,9 +63,13 @@
     border-radius: 3px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
+    transition: 0.25s  background-color;
     /* font-weight: bold; */
 }
 
+.new-tweet button:hover{
+    background-color: #2f3f74;
+}
 /* Styling for the character counter */
 .new-tweet .counter {
     font-size: 1.2em;

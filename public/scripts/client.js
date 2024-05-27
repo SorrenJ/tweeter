@@ -118,9 +118,13 @@ $('.error').hide();
     //console.log("#tweet-form.serialize() value: ", $(this).serialize());
   });
 
+  // hide new tweet from the start
+  $('#compose-tweet-selector').hide();
 
+  // press arrow button to compose a new tweet
   $('#arrow-button-selector').click(function() {
-    $('html, body').animate({scrollTop: 0}, 'fast');
-});
+      $('#compose-tweet-selector').slideToggle('fast');
+      $('html, body').animate({scrollTop: 0}, 'fast');
+  });
 
 });
