@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -13,80 +14,62 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #ebf1fe;
-  font-family: "Source Sans 3",Arial, Helvetica, sans-serif;
+  font-family: "Source Sans 3", Arial, Helvetica, sans-serif;
   font-size: 1em;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
- main{
+main {
   width: 90%;
   margin: auto;
-  /* border: 3px solid #73AD21; */
   padding: 10px;
   background-color: inherit;
- }
+}
 
-
- .main-container {
+.main-container {
   display: flex;
   width: 100%;
-  /* height: 100%; */
 }
-
-.main-item-left {
-  /* background-color: #4056A1; */
-  font-family: "Bungee", sans-serif;
-  display: flex;
-  /* align-items: center; */
-  flex: 1;
-  width: 40%;
-  margin-top: 100px;
-  position:fixed;
-  top:0;
-}
-
-.main-item-right {
-  /* background-color: #4056A1; */
-  width: 60%;
-  display: flex;
-  /* flex-direction: column; */
-  align-items: center;
-  /* text-align: center; */
-  /* font-size: 0.8em; */
-  /* margin-right: 1.5em; */
-  margin-top: 100px;
-  /* justify-content: center; */
-  position:relative;
-  margin-left: 40%; /* so that it doesnt overlap with left item when it position fixed */
-   
-}
-.end_message{
-  font-size:1.5em;
-  text-align:center;
-}
-
- @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .main-container {
     flex-direction: column;
     padding-top: 0.5em;
-}
-
-.main-item-right, .main-item-left {
+  }
+  .main-container .main-item-right, .main-container .main-item-left {
     flex: 100%;
     text-align: center;
     margin: 0;
     padding: 0;
     width: 100%;
-    position:relative;
+    position: relative;
+  }
 }
 
+.main-item-left {
+  font-family: "Bungee", sans-serif;
+  display: flex;
+  flex: 1;
+  width: 40%;
+  margin-top: 100px;
+  position: fixed;
+  top: 0;
+}
 
+.main-item-right {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  position: relative;
+  margin-left: 40%;
+}
 
+.end_message {
+  font-size: 1.5em;
+  text-align: center;
 }

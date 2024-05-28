@@ -1,45 +1,25 @@
 .hero-banner {
-    height: 400px;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    /* padding-left: 33%;
-    padding-right: 33%; */
-    text-align: center;
-    /* margin-top:200px; */
-    padding: 40px;
-    /* padding-top:100px; */
-    color: white;
-    background-image: url("../images/cubes.png");
-    background-color: #232020;
-    margin-left: 10%;
-    margin-top:50px;
-    /* margin-right: 10%; */
+  height: 400px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  color: #ffffff;
+  background-image: url("../images/cubes.png");
+  background-color: #232020;
+  margin-left: 10%;
+  margin-top: 50px;
 }
-
-
-.header-content{
-    /* padding-top:0.25em; */
-    /* padding-bottom:0.5em; */
-    /* transform: scale(0.75); */
-    /* line-height: 0.01; */
-    vertical-align: middle;
-    margin:25%, 25%;
-}
-
-header br{
-
-}
-
 @media screen and (max-width: 1024px) {
-    .hero-banner {
-        margin-left: 0;
-        /* padding-top:2em; */
-        z-index:2;
-        margin-top:-15px;
-    }
-    .header-content{
-        /* padding-top:100px; */
-     
-    }
+  .hero-banner {
+    margin-left: 0;
+    z-index: 2;
+    margin-top: -15px;
+  }
+}
+
+.header-content {
+  vertical-align: middle;
+  margin: 25%, 25%;
 }
