@@ -139,6 +139,7 @@ if ($('html, body').scrollTop() === 0){
 
   $("#scrollTop").click(function() {
     $('html, body').animate({scrollTop: 0}, 'fast');
+    $('#compose-tweet-selector').slideToggle('fast');
 });
 
 
