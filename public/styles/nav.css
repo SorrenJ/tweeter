@@ -70,7 +70,32 @@ nav {
   }
 }
 
+#scrollTop{
+  display:none;
+  position:fixed;
+  top:90%;
+  right:5%;
+  z-index:8;
+  width: 50px;
+  height: 50px;
+  background-color: #F44336;
+  border-radius: 50%;
+  display: flex;
+  /* padding:2px; */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  transition: 0.5s display, 0.5s background-color;
+  cursor: pointer;
+}
 
+#scrollTop:hover{
+  background-color: #ba3329;
+}
+.fa-angles-up{
+  padding: 15px 5px;
+}
 
 /* Responsive layout - makes a one column-layout instead of a two-column layout */
 @media (max-width: 1024px) {

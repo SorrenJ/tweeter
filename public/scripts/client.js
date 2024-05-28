@@ -11,6 +11,7 @@ $(document).ready(function() {
     }
   };
 
+  // prevents xss injection
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -50,7 +51,7 @@ $(document).ready(function() {
       method: 'GET',
     })
       .then((data) => {
-    
+    // recent tweets are on top
         renderTweets(data.reverse());
 
       })
@@ -127,4 +128,19 @@ $('.error').hide();
       $('html, body').animate({scrollTop: 0}, 'fast');
   });
 
+  $( "#scrollTop" ).css( "display", "none" );
+  $( window ).on( "scroll", function() {
+    $( "#scrollTop" ).css( "display", "inline" );
+if ($('html, body').scrollTop() === 0){
+  $( "#scrollTop" ).css( "display", "none" );
+}
+
+  } );
+
+  $("#scrollTop").click(function() {
+    $('html, body').animate({scrollTop: 0}, 'fast');
 });
+
+
+
+});// end of whole ducument
