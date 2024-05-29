@@ -45,7 +45,7 @@ The following are just some notes I took while developing the project, mainly fo
 
 
 
-##  Basic character counter
+###  Basic character counter
 
 ```js
 $(document).ready(function() {  
@@ -65,7 +65,7 @@ $(document).ready(function() {
 ```
 
 
-## Character Limit counter
+### Character Limit counter
 
 ``` js
 $(document).ready(function() {
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
 
 
-## Rendering tweets
+### Rendering tweets
 
 
 #### JSON data
@@ -204,9 +204,9 @@ const createTweetElement = function(tweet) {
 ```
 
 
-# Submitting a tweet
+### Submitting a tweet
 
-## Submitting a form - Add an Event Listener and Prevent the Default Behaviour
+#### Submitting a form - Add an Event Listener and Prevent the Default Behaviour
 
 `.preventDefault()` prevent the default form submission behaviour of sending the post request and reloading the page
 
@@ -236,7 +236,7 @@ $( "form" ).on( "submit", function( event ) {
 ```
 
 
-## Serializing 
+#### Serializing 
 
 ``
 `.serialize()` function turns a set of form data into a query string. This _serialized_ data should be sent to the server in the `data` field of the AJAX `POST` request.
@@ -267,7 +267,7 @@ example 2
 
 ```
 
-## Ajax POST method
+#### Ajax POST method
 
 example 1
  ```js
@@ -294,7 +294,7 @@ example 1
 ```
 
 
-## Ajax Post implementation
+#### Ajax Post implementation
 
 This creates the rendered tweets (called from `loadTweets()`) asynchronously once the user presses the submit button.
 
@@ -329,9 +329,9 @@ This creates the rendered tweets (called from `loadTweets()`) asynchronously onc
 
 In the networks tab you should see this POST request made once the user presses the button.
 
-![[Screenshot 2024-05-25 041246.png]]
+![[Screenshot 2024-05-25 041246.png]](https://github.com/SorrenJ/tweeter/blob/master/docs/Screenshot%202024-05-25%20041246.png)
 
-## Ajax GET implementation
+#### Ajax GET implementation
 
 Placed before the POST,  `loadTweets()` makes a GET HTTP request to fetch the tweets by calling `renderTweets()`. if successful and catches error if failed. Once the document is fully loaded, `loadTweets()` is called and is run.
 
@@ -364,9 +364,9 @@ We should also adjust the options on `<form>` in the `index.html`
 
 We should see this GET request upon first opening the document, as well as when a user submits the form
 
-![[Screenshot 2024-05-25 041813.png]]
+![[Screenshot 2024-05-25 041813.png]](https://github.com/SorrenJ/tweeter/blob/master/docs/Screenshot%202024-05-25%20041813.png) 
 
-## Error handling
+### Error handling
 
 I handled errors using the following conditional statements that slides down styled messages with the jQuery `.slideDown()` built in function. 
 
@@ -407,4 +407,4 @@ if ($("#tweet-text").val().length > 0 && $("#tweet-text").val().length <= setLim
 
 
 
-[Click here to read my documentation](https://github.com/SorrenJ/tweeter/blob/master/docs/Tweeter_documentation.pdf)
+[PDF of the documentation](https://github.com/SorrenJ/tweeter/blob/master/docs/Tweeter_documentation.pdf)
