@@ -44,4 +44,4 @@ This repository is the starter code for the project: Students will fork and clon
 Just some notes I took while developing the project, mainly focussing on the AJAX requests and jQuery functionalities.
 
 
-[![Documentation Link](https://github.com/SorrenJ/tweeter/blob/master/docs/Tweeter_documentation.pdf)](Click here to read my documentation)
+[Click here to read my documentation](https://github.com/SorrenJ/tweeter/blob/master/docs/Tweeter_documentation.pdf)
