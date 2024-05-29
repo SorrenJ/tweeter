@@ -107,9 +107,11 @@ $('.error').hide();
     })
       .then(() => {
         $('#tweet-text').val(''); // clears text area after a sucessful post
+        $('#char-counter').text(140); // RESET COUNTER
         loadTweets(); // Load tweets again to get the new one
-      
+       
         $('.error').slideUp();
+        $("#tweet-text").val().length = 0;
       })
       .catch((error) => {
         console.log("error: ", error);

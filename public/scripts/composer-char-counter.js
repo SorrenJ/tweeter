@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     // alert(`user wrote ${charCount} characters`);
     // Update the character count display
+    
     $('#char-counter').text(charCounter);
 
     if (charCounter < 0) {
@@ -17,7 +18,17 @@ $(document).ready(function() {
       $('#char-counter').css("color", "#484848");
     }
  
+    
+
+
+  
+
   });
+
+
+
+
+
 
 
 
