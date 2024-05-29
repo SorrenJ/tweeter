@@ -41,7 +41,7 @@ $(document).ready(function() {
       </article>
       <br>
     `);
-    // tweet.content.text.empty();
+
     return $tweet;
   };
 
@@ -51,7 +51,8 @@ $(document).ready(function() {
       method: 'GET',
     })
       .then((data) => {
-    // recent tweets are on top
+    
+        // recent tweets are on top
         renderTweets(data.reverse());
 
       })
@@ -77,15 +78,13 @@ $('.error').hide();
 
     
     if ($("#tweet-text").val().length === 0){ // user inputs 0 chars
-   //return alert("Field cannot be blank");
-  // $(".error").show();
+
   $('.error').slideUp(); // slide up in case you have an error message already
   return $("#empty").slideDown(); // the new error message
    }
 
     if ([...$("#tweet-text").val()].every(char => char === ' ')){ //converts the string to indiv chars and checks if every char is a space
-     // return alert("Field cannot be blank");
-    // $(".error").show();
+ 
     $('.error').slideUp(); // slide up in case you have an error message already
     return $("#empty").slideDown();
          
@@ -107,7 +106,7 @@ $('.error').hide();
     })
       .then(() => {
         $('#tweet-text').val(''); // clears text area after a sucessful post
-        $('#char-counter').text(140); // RESET COUNTER
+        $('#char-counter').text(140); // Resets counter when post
         loadTweets(); // Load tweets again to get the new one
        
         $('.error').slideUp();
@@ -118,18 +117,19 @@ $('.error').hide();
        
       });
     }
-    //console.log("#tweet-form.serialize() value: ", $(this).serialize());
+   
   });
 
   // hide new tweet from the start
   $('#compose-tweet-selector').hide();
 
-  // press arrow button to compose a new tweet
+  // press nav arrow button to compose a new tweet, scrolls up too
   $('#arrow-button-selector').click(function() {
       $('#compose-tweet-selector').slideToggle('fast');
       $('html, body').animate({scrollTop: 0}, 'fast');
   });
 
+   // 2nd arrow button displays only when user scrolls
   $( "#scrollTop" ).css( "display", "none" );
   $( window ).on( "scroll", function() {
     $( "#scrollTop" ).css( "display", "inline" );
@@ -139,6 +139,7 @@ if ($('html, body').scrollTop() === 0){
 
   } );
 
+     // 2nd arrow button functionality to scroll up and reveal compose
   $("#scrollTop").click(function() {
     $('html, body').animate({scrollTop: 0}, 'fast');
     $('#compose-tweet-selector').slideToggle('fast');

@@ -19,18 +19,29 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Demo
 
-Basic Functionality
+### Basic Functionality
 
-[![Watch the video](https://github.com/SorrenJ/tweeter/blob/master/docs/basicFunctionality.gif)](https://github.com/SorrenJ/tweeter/blob/master/docs/basicFunctionality.gif)
-
-
-Error messages
-
-[![Watch the video](https://github.com/SorrenJ/tweeter/blob/master/docs/TooLongError.gif)](https://github.com/SorrenJ/tweeter/blob/master/docs/TooLongError.gif)
-
-[![Watch the video](https://github.com/SorrenJ/tweeter/blob/master/docs/cannotBeBlank.gif)](https://github.com/SorrenJ/tweeter/blob/master/docs/cannotBeBlank.gif)
+[![Basic Functionality GIF](https://github.com/SorrenJ/tweeter/blob/master/docs/basicFunctionality.gif)](https://github.com/SorrenJ/tweeter/blob/master/docs/basicFunctionality.gif)
 
 
-Responsiveness
+### Error message Too Long Tweet
 
-[![Watch the video](https://github.com/SorrenJ/tweeter/blob/master/docs/responsive.gif)](https://github.com/SorrenJ/tweeter/blob/master/docs/responsive.gif)
+[![Too Long Error GIF](https://github.com/SorrenJ/tweeter/blob/master/docs/TooLongError.gif)](https://github.com/SorrenJ/tweeter/blob/master/docs/TooLongError.gif)
+
+### Error message Cannot Be Blank Tweet
+
+[![Cannot Be Blank GIF](https://github.com/SorrenJ/tweeter/blob/master/docs/cannotBeBlank.gif)](https://github.com/SorrenJ/tweeter/blob/master/docs/cannotBeBlank.gif)
+
+
+### Responsiveness
+
+[![Responsivness GIF](https://github.com/SorrenJ/tweeter/blob/master/docs/responsive.gif)](https://github.com/SorrenJ/tweeter/blob/master/docs/responsive.gif)
+
+
+
+## Tweeter Documentation 
+
+Just some notes I took while developing the project, mainly focussing on the AJAX requests and jQuery functionalities.
+
+
+[![Documentation Link]](https://github.com/SorrenJ/tweeter/blob/master/docs/Tweeter_documentation.pdf)
