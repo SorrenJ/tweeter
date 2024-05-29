@@ -21,16 +21,16 @@ This repository is the starter code for the project: Students will fork and clon
 
 Basic Functionality
 
-[![Watch the video](https://img.youtube.com/vi/_5tFXJQIzi4/0.jpg)](https://www.youtube.com/watch?v=_5tFXJQIzi4)
+[![Watch the video]](https://github.com/SorrenJ/tweeter/blob/master/docs/basicFunctionality.mp4)
 
 
 Error messages
 
-[![Watch the video](https://img.youtube.com/vi/_5tFXJQIzi4/0.jpg)](https://www.youtube.com/watch?v=_5tFXJQIzi4)
+[![Watch the video]](https://github.com/SorrenJ/tweeter/blob/master/docs/TooLongError.mp4)
 
-[![Watch the video](https://img.youtube.com/vi/_5tFXJQIzi4/0.jpg)](https://www.youtube.com/watch?v=_5tFXJQIzi4)
+[![Watch the video]](https://github.com/SorrenJ/tweeter/blob/master/docs/cannotBeBlank.mp4)
 
 
 Responsiveness
 
-[![Watch the video](https://img.youtube.com/vi/_5tFXJQIzi4/0.jpg)](https://www.youtube.com/watch?v=_5tFXJQIzi4)
+[![Watch the video]](https://github.com/SorrenJ/tweeter/blob/master/docs/responsive.mp4)
