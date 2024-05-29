@@ -128,33 +128,18 @@ $(document).ready(function() {
 
 #### Render Tweets
 
-This function can be responsible for _taking in an array of tweet objects_ and then appending each one to the `#tweets-container`. In order to do this, the `renderTweets` will need to leverage the `createTweetElement` function you wrote earlier by passing the tweet object to it, then using the returned jQuery object by appending it to the `#tweets-container` section.
+This function takes an array of tweet objects and then append each one to the `#tweets-container`. In order to do this, the `renderTweets` will pass the tweet object to `createTweetElement`, then use the returned jQuery object by appending it to the `#tweets-container` section.
 
+Calls  `createTweetElement(tweet)` every loop
 
-Calls  ``createTweetElement(tweet)`` every loop
 
 ``` js
   const renderTweets = function(tweets) {
-
-    // loops through tweets
-
-    // calls createTweetElement for each tweet
-
-    // takes return value and appends it to the tweets container
-
-    // data [{},{},{}]
-
-    console.log(tweets.length);
-
-    for (let i = 0; i < tweets.length; i++) {// {}, {}, {}
-
-      let tweet = tweets[i];
-
-      let newTweet = createTweetElement(tweet);
-
-      $('#tweets-container').prepend(newTweet);
-
-    }
+   $tweetContainer.empty(); // clear tweet container whenever it renders
+    
+    for (let tweet of tweets) {
+      let newTweet = createTweetElement(tweet);
+      $tweetContainer.append(newTweet);
 
   };
 
@@ -223,7 +208,7 @@ const createTweetElement = function(tweet) {
 
 ## Submitting a form - Add an Event Listener and Prevent the Default Behaviour
 
-``.preventDefault()`` prevent the default form submission behaviour of sending the post request and reloading the page
+`.preventDefault()` prevent the default form submission behaviour of sending the post request and reloading the page
 
 example 1
 
@@ -254,7 +239,7 @@ $( "form" ).on( "submit", function( event ) {
 ## Serializing 
 
 ``
-``.serialize()`` function turns a set of form data into a query string. This _serialized_ data should be sent to the server in the `data` field of the AJAX `POST` request.
+`.serialize()` function turns a set of form data into a query string. This _serialized_ data should be sent to the server in the `data` field of the AJAX `POST` request.
 
 example 1
 
@@ -325,7 +310,7 @@ This creates the rendered tweets (called from `loadTweets()`) asynchronously onc
     $.ajax({
       url: '/tweets',
       method: 'POST',
-      data: $(this).serialize()
+      data: $(this).serialize() // auto increments the data
     })
 
       .then(() => {
